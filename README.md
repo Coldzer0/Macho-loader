@@ -1,4 +1,4 @@
-# Macho loader
+# Macho loader - Mac OS x64
 
 ### this code work with mini FPC core librarys `<Bare Bones>` for `Mac OS` <br> the generated files `main & libtest.dylib` is `8kb` only .
 
@@ -18,6 +18,8 @@ that are provided by libdyld.dylib. As we don't know the address of libdyld.dyli
 - We find the offset, we resolve the functions and from then on, <br> it's standard loading of macho bundle .
 
 ### the main logic start at `"Core/loadfunctions.pas"` in `loadall()` .
+
+### this works only with x64 macho files .
 
 ## Requirements
 - FreePascal Compiler >= v3
