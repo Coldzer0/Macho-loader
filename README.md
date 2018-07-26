@@ -21,7 +21,7 @@ that are provided by libdyld.dylib. As we don't know the address of libdyld.dyli
 
 ## Requirements
 - FreePascal Compiler >= v3
-- Mac OS :V
+- Mac OS <img src="https://static.xx.fbcdn.net/images/emoji.php/v9/e72/2/16/PACMAN.png" width="20">
 - nodejs >> for the server.js - or make your own :P 
 
 ## How to Build
@@ -30,5 +30,5 @@ that are provided by libdyld.dylib. As we don't know the address of libdyld.dyli
 - run `node server.js`
 - run `./main`
 
-## that's all - see you soon guys :V
+## that's all - see you soon guys <img src="https://static.xx.fbcdn.net/images/emoji.php/v9/e72/2/16/PACMAN.png" width="20">
 ## Oh Contact : <`Coldzer0 [at] protonmail.ch`>
