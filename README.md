@@ -17,7 +17,7 @@ that are provided by libdyld.dylib. As we don't know the address of libdyld.dyli
 - The trick is that the offset inside of libdyld.dylib must be <br> present as it's placed there by the dynamic linker as the <br> return function when main returns. 
 - We find the offset, we resolve the functions and from then on, <br> it's standard loading of macho bundle .
 
-
+### the main logic start at `"Core/loadfunctions.pas"` in `loadall()` .
 
 ## Requirements
 - FreePascal Compiler >= v3
