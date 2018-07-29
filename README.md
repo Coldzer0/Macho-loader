@@ -1,6 +1,6 @@
 # Macho loader - Mac OS x64
 
-### this code work with mini FPC core librarys `<Bare Bones>` for `Mac OS` <br> the generated files `main & libtest.dylib` is `8kb` only .
+### this code work with mini FPC core librarys `<Bare Bones>` for `Mac OS` <br> the generated files `main & libtest.dylib` is `8kb` `<each>` only .
 
 
 ## `< load macho from memory with socket connection >`
