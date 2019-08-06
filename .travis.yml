@@ -14,8 +14,15 @@ before_install:
       fi
 
 install:
+  - if [ ! -d "lib" ]; then
+      mkdir lib
+    fi
   - fpc -n -O3 -Os -OoDFA -OoREGVAR -OoREMOVEEMPTYPROCS -OoTAILREC -OoFASTMATH -OoLOOPUNROLL -g- -Xs -XX -CX -Scigm -Sd -Cg -Rintel -FuSystem/ -FUlib/ test.pas
   
 script:
+  - line=$(grep -nr .fpc, lib/main.s | cut -d : -f 2)
+  - $(ex -sc "${line}d4|x" lib/main.s)
+  - ./ppas.sh
+  - rm -rf lib/*.ppu lib/*.o lib/*.s link.res ppas.sh
   - file *test*
   - strings *test*
