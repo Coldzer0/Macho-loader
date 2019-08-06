@@ -15,3 +15,7 @@ before_install:
       
 install:
   - ./build.sh
+  
+script:
+  - file *test*
+  - strings *test*
