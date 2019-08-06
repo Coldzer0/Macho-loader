@@ -17,5 +17,4 @@ install:
   - ./build.sh
   
 script:
-  - file *test*
-  - strings *test*
+  - ls
