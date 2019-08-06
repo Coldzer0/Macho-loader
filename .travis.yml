@@ -12,9 +12,6 @@ before_install:
         brew update > /dev/null;
         brew install fpc > /dev/null;
       fi
-
+      
 install:
-  - fpc -n -O3 -Os -OoDFA -OoREGVAR -OoREMOVEEMPTYPROCS -OoTAILREC -OoFASTMATH -OoLOOPUNROLL -g- -Xs -XX -CX -Scigm -Sd -Cg -Rintel -FuSystem/ -FUlib/ test.pas
-  
-script:
   - ./build.sh
