@@ -9,9 +9,9 @@ if [ ! -d "lib" ]; then
 fi
 rm -rf lib/*.ppu lib/*.o lib/*.s link.res ppas.sh
 
-fpc64 -n -O3 -Os -OoDFA -OoREGVAR -OoREMOVEEMPTYPROCS -OoTAILREC -OoFASTMATH -OoLOOPUNROLL -g- -Xs -XX -CX -Scigm -Sd -Cg -Rintel -FuSystem/ -FUlib/ test.pas
+fpc -n -O3 -Os -OoDFA -OoREGVAR -OoREMOVEEMPTYPROCS -OoTAILREC -OoFASTMATH -OoLOOPUNROLL -g- -Xs -XX -CX -Scigm -Sd -Cg -Rintel -FuSystem/ -FUlib/ test.pas
 # Generate asm files ..
-fpc64 -n -O3 -Os -OoDFA -OoREGVAR -OoREMOVEEMPTYPROCS -OoTAILREC -OoFASTMATH -OoLOOPUNROLL -g- -Xs -XX -CX -Scigm -Sd -Cg -Rintel -a -s -FuCore/ -FuSystem/ -FUlib/ main.pas 
+fpc -n -O3 -Os -OoDFA -OoREGVAR -OoREMOVEEMPTYPROCS -OoTAILREC -OoFASTMATH -OoLOOPUNROLL -g- -Xs -XX -CX -Scigm -Sd -Cg -Rintel -a -s -FuCore/ -FuSystem/ -FUlib/ main.pas 
 # remove FPC marker from code .
 line=$(grep -nr .fpc, lib/main.s | cut -d : -f 2)
 $(ex -sc "${line}d4|x" lib/main.s)
